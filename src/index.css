@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-bebas: "Arial Black", sans-serif;
+  --font-syne: Arial, sans-serif;
+  --font-dm: Arial, sans-serif;
+
+  --color-arlo-blue: #1A3A8F;
+  --color-arlo-light-blue: #2E54C0;
+  --color-arlo-cream: #F5F5F0;
+  --color-arlo-dark: #0D1B3E;
+  
+  --animate-marquee: marquee 25s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+@utility bg-checkerboard {
+  background-image: repeating-conic-gradient(var(--color-arlo-blue) 0% 25%, #FFFFFF 0% 50%);
+  background-size: 24px 24px;
+}
+
+@utility dot-grid {
+  background-image: radial-gradient(var(--color-arlo-light-blue) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: var(--font-dm);
+  background-color: var(--color-arlo-dark);
+  color: var(--color-arlo-white);
+  overflow-x: hidden;
+}
